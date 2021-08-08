@@ -149,11 +149,9 @@ class Xnce():
                     elif any(ch in self.req.text for ch in self.check_response):
                         self.done += 1
                         system(f"title"+f"[+] Done: {self.done} / Error: {self.error}")
-                        #print(f"\r[+] Done: {self.done} / Error: {self.error}", end="")
                     elif any(er in self.req.text for er in self.error_response) or self.req.status_code == 429:
                         self.error += 1
                         system(f"title"+f"[+] Done: {self.done} / Error: {self.error}")
-                        #print(f"\r[+] Done: {self.done} / Error: {self.error}", end="")
                     elif any(un in self.req.text.lower() for un in self.unknown_response) or self.req.text == "":
                         pass
                     else:
@@ -192,10 +190,10 @@ class Xnce():
                 self.run = False
             elif any(ch in self.req.text for ch in self.check_response):
                 self.done += 1
-                print(f"\r[+] Done: {self.done} / Error: {self.error}", end="")
+                system(f"title"+f"[+] Done: {self.done} / Error: {self.error}")
             elif any(er in self.req.text for er in self.error_response) or self.req.status_code == 429:
                 self.error += 1
-                print(f"\r[+] Done: {self.done} / Error: {self.error}", end="")
+                system(f"title"+f"[+] Done: {self.done} / Error: {self.error}")
             elif any(un in self.req.text.lower() for un in self.unknown_response) or self.req.text == "":
                 pass
             else:
