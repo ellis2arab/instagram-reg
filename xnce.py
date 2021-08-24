@@ -27,7 +27,7 @@ class Xnce():
             self.dis = False
         self.done, self.error, self.run = 0, 0, True
         self.head = {"user-agent": f"Instagram 195.0.0.0.000 Android (29/10; 300dpi; 720x1440; {''.join(random.choices(string.ascii_lowercase+string.digits, k=16))}/{''.join(random.choices(string.ascii_lowercase+string.digits, k=16))}; {''.join(random.choices(string.ascii_lowercase+string.digits, k=16))}; {''.join(random.choices(string.ascii_lowercase+string.digits, k=16))}; {''.join(random.choices(string.ascii_lowercase+string.digits, k=16))}; en_GB;)"}
-        self.claimed_response = ["challenge", '"account_created": true']
+        self.claimed_response = ["challenge", '"account_created":true']
         self.check_response = ["username_is_taken", "username_held_by_others"]
         self.error_response = ["signup_block", "generic_request_error"]
         self.unknown_response = ["server error", "html"]
